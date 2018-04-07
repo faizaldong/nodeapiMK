@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var todoList = require('../controllers/mkapiController');
+var ajk_c = require('../controllers/ajkController');
 
-// GET users listing. 
-router.get('/tasks', function(req, res, next) {
-  todoList.list_all_tasks(req, res)
-});
+
+// /\/\/\/\/\/\/\/\/\/\/\/\ AJK /\/\/\/\/\/\/\/\/\/\/\/\
+router.get('/admin/api/ajk', function(req, res, next) { ajk_c.Listing(req, res); });
 
 module.exports = router;
