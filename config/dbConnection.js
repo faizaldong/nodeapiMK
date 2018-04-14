@@ -1,9 +1,11 @@
+var env=require('./environments/env'); //reference of dbConnection.js
+
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "faizaL6275",
-  database: "majlis_kuliah"
+  host: env.host,
+  user: env.user,
+  password: env.password,
+  database: env.database
 });
 
 module.exports=connection;
